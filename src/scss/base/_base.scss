@@ -1,4 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* over-riding default font size to 10px instead of default - 16px */
+  font-size: 10px;
+}
+
 body {
+  background: #fdfefe;
   font-family: 'Lato', sans-serif;
-  background: lightblue;
+}
+
+p {
+  font-size: 1.6rem;
 }

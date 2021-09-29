@@ -15,7 +15,27 @@
     "dev": "concurrently \"npm start \" \"npm run scss \"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "stylelint": "stylelint './**/*.scss' --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,html,yaml,md}": [
+      "prettier --write"
+    ],
+    "**/*{scss}": [
+      "yarn stylelint"
+    ],
+    "**/*{js, jsx, ts, tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "yarn test --watchAll=false --findRelatedTests --bail"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +59,13 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "concurrently": "^6.2.2"
+    "concurrently": "^6.2.2",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-prettier": "^1.2.0"
   }
 }
