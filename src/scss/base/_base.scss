@@ -5,7 +5,7 @@
 }
 
 html {
-  /* over-riding default font size to 10px instead of default - 16px */
+  /* over-riding default font size to 10px instead of default - 16px for easy calculation */
   font-size: 10px;
 }
 
@@ -15,5 +15,6 @@ body {
 }
 
 p {
+  // 16px since 1 rem === 10px now coz of html root element, 2 rem === 20px
   font-size: 1.6rem;
 }
