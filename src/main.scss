@@ -1,3 +1,6 @@
-// input file
+// input files
+// Sass partials are used with the @use rule
+
 @use 'scss/base/base';
 @use 'scss/components/header';
+@use 'scss/utils/utils';

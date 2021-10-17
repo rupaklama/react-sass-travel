@@ -1,0 +1,44 @@
+// A Mixin function is basically a Set of Styles that we want to include & reuse
+
+@mixin position($position, $top, $bottom, $left, $right, $width, $height) {
+  bottom: $bottom;
+  height: $height;
+  left: $left;
+  position: $position;
+  right: $right;
+  top: $top;
+  width: $width;
+}
+
+@mixin align($flex, $justify-content, $align-items, $height) {
+  align-items: $align-items;
+  display: $flex;
+  height: $height;
+  justify-content: $justify-content;
+}
+
+@mixin button(
+  $color1,
+  $color2,
+  $textColor,
+  $height,
+  $fontSize,
+  $bdr,
+  $paddingVertical,
+  $paddingHorizontal
+) {
+  // left to right
+  background: linear-gradient(to right, $color1, $color2);
+  border: 0;
+  border-radius: $bdr;
+  color: $textColor;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $fontSize;
+  height: $height;
+  line-height: $height;
+  outline: none;
+  padding: $paddingVertical $paddingHorizontal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
