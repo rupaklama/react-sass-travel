@@ -23,10 +23,25 @@
   }
 
   &-contents-text-child-h1 {
+    animation: heading 1s ease-in;
     color: variables.$white;
     font-size: 4.2rem;
     line-height: 2.8rem;
     text-transform: uppercase;
+
+    /* stylelint-disable-next-line */
+    @keyframes heading {
+      /* stylelint-disable-next-line */
+      0% {
+        opacity: 0;
+        transform: translateY(-8rem);
+      }
+      /* stylelint-disable-next-line */
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   &-contents-text-child-p {
